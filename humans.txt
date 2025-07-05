@@ -1,0 +1,8 @@
+/* TEAM */
+Designer: Dmitry Barekaev
+Twitter: @dmitry_barekaev
+Location: Казань, Россия
+
+/* SITE */
+Last update: 2025-04-05
+Built with: HTML, TailwindCSS, JavaScript

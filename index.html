@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+	<link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma для начинающих | Освой дизайн за 14 дней | Dev4Rev</title>
+    <meta name="description" content="Освой Figma с нуля за 14 дней! Профессиональный курс по дизайну интерфейсов для новичков. Практика, портфолио, живое обучение.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Figma для начинающих | Освой дизайн за 14 дней">
+    <meta property="og:description" content="Профессиональный курс по дизайну интерфейсов для новичков.  Практика, портфолио, живое обучение.">
+    <meta property="og:url" content="https://dev4rev.ru">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dev4rev.ru">
+
+    <!-- Schema.org Course Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org ",
+      "@type": "Course",
+      "name": "Figma для начинающих",
+      "description": "Профессиональный курс для начинающих дизайнеров. Создавай потрясающие интерфейсы без опыта в дизайне!",
+      "provider": {
+        "@type": "Organization",
+        "name": "Dev4Rev",
+        "sameAs": "https://dev4rev.ru"
+      },
+      "courseFormat": "Online",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "RUB",
+        "price": "4900",
+        "url": "https://dev4rev.ru#program"
+      }
+    }
+    </script>
+
+    <!-- Подключения стилей -->
+    <script src="https://cdn.tailwindcss.com "></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
+
+    <!-- JS скрипты -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // FAQ accordion
+            document.querySelectorAll('#faq [class*="rounded-xl"]').forEach(item => {
+                const header = item.querySelector('div[class*="p-6"]');
+                const content = item.querySelector('div[class*="hidden"]');
+                const icon = item.querySelector('i');
+                header.addEventListener('click', () => {
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    item.classList.toggle('border-primary');
+                    item.classList.toggle('border-gray-200');
+                });
+            });
+
+            // Program accordion
+            document.querySelectorAll('#program .rounded-xl').forEach(item => {
+                const header = item.querySelector('div[class*="p-6"]');
+                const content = item.querySelector('div[class*="border-t"]');
+                const icon = item.querySelector('i');
+                header.addEventListener('click', () => {
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9F7AEA',
+                        secondary: '#667EEA',
+                        dark: '#1A202C',
+                        light: '#F7FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Кастомные стили -->
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667EEA 0%, #9F7AEA 100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667EEA 0%, #9F7AEA 100%);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-dark">Dev4Rev</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-500 hover:text-primary transition-all">Возможности</a>
+                    <a href="#program" class="text-gray-500 hover:text-primary transition-all">Программа</a>
+                    <a href="#reviews" class="text-gray-500 hover:text-primary transition-all">Отзывы</a>
+                    <a href="#faq" class="text-gray-500 hover:text-primary transition-all">FAQ</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#pricing" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-purple-700 transition-all">
+                        Начать обучение
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-gradient pt-32 pb-20 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex md:items-center md:justify-between">
+                    <div class="md:w-1/2 mb-12 md:mb-0">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold bg-white text-primary rounded-full mb-4">НОВЫЙ КУРС</span>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">Освой Figma с нуля </br>за 14 дней</h1>
+                        <p class="text-xl mb-8 text-gray-100">Профессиональный курс для начинающих дизайнеров. Создавай потрясающие интерфейсы без опыта в дизайне!</p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#pricing" class="btn-primary px-8 py-4 rounded-lg font-bold text-white text-center transition-all">
+                                Начать обучение <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#video" class="flex items-center justify-center px-8 py-4 bg-white bg-opacity-10 rounded-lg font-medium transition-all hover:bg-opacity-20">
+                                <i class="fas fa-play-circle mr-2 text-xl"></i> Смотреть видео
+                            </a>
+                        </div>
+                        <div class="mt-10 flex items-center">
+                            <div class="flex -space-x-2">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg " alt="Студент 1">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg " alt="Студент 2">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg " alt="Студент 3">
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium">Более <span class="font-bold">25+</span> студентов</p>
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                    <span class="ml-1 text-sm">5.0 (17 отзывов)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <div class="relative z-4">
+                            <img src="https://cdn.sanity.io/images/599r6htc/regionalized/c0b37c91abda040890243c39c5973fde5b888a18-1081x541.png?w=1200&q=70&fit=max&auto=format " alt="Обучение Figma: создание макетов интерфейсов" class="rounded-lg shadow-2xl transform rotate-1">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-200 rounded-full opacity-30"></div>
+                        <div class="absolute -top-6 -right-6 w-40 h-40 bg-blue-200 rounded-full opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Что вы получите после курса</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">14 дней интенсивного обучения с поддержкой экспертов и практическими заданиями</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Полное понимание Figma</h3>
+                    <p class="text-gray-600">Освоите все инструменты Figma от основ до продвинутых техник прототипирования.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Готовое портфолио</h3>
+                    <p class="text-gray-600">Создадите 5 реальных проектов для портфолио, которые впечатлят работодателей.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Разборы кейсов</h3>
+                    <p class="text-gray-600">Анализ реальных проектов и разбор ошибок с опытным наставником.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Посмотрите, как проходит обучение</h2>
+                    <p class="text-gray-600 mb-8">Наш курс построен на практических примерах. Каждый урок — это шаг к созданию реального проекта. В этом видео вы увидите, как выглядит процесс обучения и какой результат вас ждет после курса.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-700">Практические задания после каждого урока</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-700">Разборы домашних работ преподавателем</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-700">Доступ к закрытому сообществу</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="relative aspect-w-16 aspect-h-9 overflow-hidden rounded-xl shadow-xl">
+                        <img src="https://framerusercontent.com/images/FvdrqyqziFHAx7HoDDETx0c4aE0.png" alt="Course Preview" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <a href="#" target="__blank">
+							<button class="w-16 h-16 rounded-full bg-white bg-opacity-80 flex items-center justify-center transform transition-all hover:scale-110">
+                                <i class="fas fa-play text-primary text-2xl"></i>
+                            </button></a>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-100 rounded-full opacity-30 z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Программа курса</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">2 недели интенсивного обучения, 14 уроков, 5 проектов в портфолио</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-8">
+                    <!-- Week 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="p-6 bg-primary text-white flex justify-between items-center cursor-pointer hover:bg-purple-700">
+                            <h3 class="text-xl font-bold">Неделя 1: Основы Figma</h3>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </div>
+                        <div class="px-6 py-4 border-t border-gray-100">
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">1</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Интерфейс и инструменты</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Знакомство с интерфейсом Figma, основные инструменты и их назначение.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">2</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Работа с формами и цветом</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создание и редактирование фигур, работа с цветом и градиентами.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">3</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Текст и типографика</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Работа с текстом, шрифтами, стилями текста и выравниванием.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">4</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Компоненты и стили</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создание и использование компонентов, работа со стилями.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">5</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Auto Layout и Constraints</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Основы адаптивного дизайна в Figma с помощью Auto Layout.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">6</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Практика: Landing Page</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создание одностраничного сайта с использованием изученных техник.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <span class="text-primary font-bold">7</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Разбор проектов</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Анализ выполненных работ, разбор ошибок и рекомендации.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Week 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="p-6 bg-secondary text-white flex justify-between items-center cursor-pointer">
+                            <h3 class="text-xl font-bold">Неделя 2: Продвинутые техники</h3>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </div>
+                        <div class="px-6 py-4 border-t border-gray-100">
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">8</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Прототипирование</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создание интерактивных прототипов с анимацией перехода.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">9</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Работа с плагинами</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Полезные плагины Figma для автоматизации работы.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">10</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Дизайн-системы</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создание и поддержание дизайн-систем для больших проектов.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">11</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Мобильные интерфейсы</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Особенности проектирования мобильных приложений.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">12</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Практика: Mobile App</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создание интерфейса мобильного приложения с нуля.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">13</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Экспорт и передача макетов</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Подготовка файлов для разработчиков, экспорт ресурсов.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                                        <span class="text-secondary font-bold">14</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Индивидуаьный проект</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Создаем собственный проект который будет привлекать внимание.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Выберите подходящий вариант</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Инвестируйте в свои навыки сегодня и получите доступ к курсу навсегда</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-800">Базовый</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold text-dark">₽4,750</span>
+                            <span class="text-gray-500 line-through ml-2">₽6,900</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Экономия 30% при оплате сегодня</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Доступ ко всем урокам</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Практические задания</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Доступ к материалам навсегда</span>
+                            </li>
+                            <li class="flex items-start opacity-50">
+                                <i class="fas fa-times text-gray-400 mt-1 mr-3"></i>
+                                <span class="text-gray-500">Проверка домашних заданий</span>
+                            </li>
+                            <li class="flex items-start opacity-50">
+                                <i class="fas fa-times text-gray-400 mt-1 mr-3"></i>
+                                <span class="text-gray-500">Онлайн занятия</span>
+                            </li>
+                        </ul>
+                        <a target="__blank" href="https://t.me/dev4rev_bot?start=buy_base" class="mt-8 block w-full px-6 py-3 border border-gray-300 rounded-md text-center font-medium text-gray-700 hover:bg-gray-50 transition-all">
+                            Выбрать тариф
+                        </a>
+                    </div>
+                </div>
+                <!-- Popular Plan -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden border-2 border-primary relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">ПОПУЛЯРНЫЙ</div>
+                    <div class="p-6 bg-gradient-to-r from-purple-100 to-blue-100">
+                        <h3 class="text-xl font-semibold text-gray-800">Стандарт</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold text-dark">₽12,900</span>
+                            <span class="text-gray-500 line-through ml-2">₽17,200</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Экономия 25% при оплате сегодня</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Доступ ко всем урокам</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Практические задания</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Доступ к материалам навсегда</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Проверка домашних заданий</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Онлайн занятия</span>
+                            </li>
+                        </ul>
+                        <a target="__blank" href="https://t.me/dev4rev_bot?start=buy_standart" class="mt-8 block w-full px-6 py-3 bg-primary text-white rounded-md text-center font-medium hover:bg-purple-700 transition-all">
+                            Выбрать тариф
+                        </a>
+                    </div>
+                </div>
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-xl font-semibold text-gray-800">Премиум</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold text-dark">₽21,000</span>
+                            <span class="text-gray-500 line-through ml-2">₽29,000</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Экономия 28% при оплате сегодня</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Доступ ко всем урокам</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Практические задания</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Доступ к материалам навсегда</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Проверка домашних заданий</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Онлайн занятия</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Оффлайн консультации</span>
+                            </li>
+                        </ul>
+                        <a target="__blank" href="https://t.me/dev4rev_bot?start=buy_premium" " class="mt-8 block w-full px-6 py-3 border border-gray-300 rounded-md text-center font-medium text-gray-700 hover:bg-gray-50 transition-all">
+                            Выбрать тариф
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-600">Есть вопросы по выбору тарифа? <a target="__blank" href="https://t.me/dmitry_barekaev?text=Здравствуйте!%20Пишу%20Вам%20с%20сайта,%20помогите,%20пожалуйста,%20выбрать%20подходящий%20тариф." class="text-primary font-medium hover:underline">Напишите нам</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Отзывы наших студентов</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Что говорят те, кто уже прошел курс</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://60.img.avito.st/image/1/1.h8C-87a1PSmIVKkvvPGgpsRRKSkAWKkviFQpKw.rT9zU6gJmUIm_iBHNNWnpF03jcjMUFcI9_13wT3ETgQ" alt="Анна">
+                        <div>
+                            <h4 class="font-bold">Анна</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Профессионал своего дела, очень доступно и все понятно помогал в работе Фигма. Очень вежливый. Я довольна, что есть такие отзывчивые люди. Цена соответствовала заявленной."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Прошла курс в апреле 2025</span>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://static.avito.ru/stub_avatars/A/1_256x256.png" alt="Alexandr">
+                        <div>
+                            <h4 class="font-bold">Alexandr</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Интересный преподаватель - подробно рассказал об основах на пробном занятии и ответил на все интересующие вопросы.
+Понравилось, что есть возможность гибко построить график обучения и всегда можно оперативно перенести время занятия в случае форс-мажора."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Прошел курс в декабре 2024</span>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://80.img.avito.st/image/1/1.Re-V4La1_wajR2sAk7VhjY9B6wYrS2sAo0frBA.Ooa0Q7v9BANani1WMoZd594pVdro3wUenOvkdEspooc" alt="Алина">
+                        <div>
+                            <h4 class="font-bold">Алина</h4>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                                <i class="fas fa-star text-yellow-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Спасибо за обучение!
+Уже на третьем занятии самостоятельно нарисовала красивый интерфейс для мобильного приложения.
+Очень нравится, что занятия проходят не в записи и можно задавать вопросы онлайн."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Прошла курс в марте 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a target="__blank" href="https://www.avito.ru/brands/23c81b9abb8b9dbe35879d4d75542cc1/all?gdlkerfdnwq=101&page_from=from_item_card&iid=4286341876&sellerId=0dad040b1b04d634fc10e9fc06124dc4" class="inline-flex items-center px-6 py-3 border border-gray-300 rounded-md text-gray-700 font-medium hover:bg-gray-50 transition-all">
+                    <i class="fas fa-comment-alt mr-2"></i> Все отзывы
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Частые вопросы</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ответы на наиболее популярные вопросы о курсе</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary">
+                        <div class="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-50">
+                            <h3 class="text-lg font-medium text-gray-900">Нужен ли опыт в дизайне для этого курса?</h3>
+                            <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-300"></i>
+                        </div>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-600">Курс специально разработан для начинающих. Мы начинаем с самых основ Figma и постепенно переходим к более сложным темам. Главное — желание учиться и выполнять практические задания.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <div class="flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-medium text-gray-900">Как проходит обучение?</h3>
+                            <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-300"></i>
+                        </div>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-600">После оплаты вы получаете доступ к платформе с уроками. Каждый урок состоит из видео, текстовых материалов и практического задания. Вы можете учиться в удобном темпе, но мы рекомендуем проходить по одному уроку в день для лучшего усвоения материала.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <div class="flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-medium text-gray-900">Какие программы и оборудование нужны для обучения?</h3>
+                            <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-300"></i>
+                        </div>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-600">Для удобаства рекоменндуем установить приложение Figma или использовать приложение в браузере.
+							Онлайн уроки мы проводим на платформе Google meet не требуещей регистриации и установки приложений.
+							Все функции, описанные в курсе, доступны в бесплатной версии Figma, на занятиях расскажем как получить подписку Education для работы с расширенными функционалом.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                        <div class="flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="text-lg font-medium text-gray-900">Как происходит оплата курса? Можно ли оплатить его по частям?</h3>
+                            <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-300"></i>
+                        </div>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-600">Базовый пакет предполагает единовременную разовую оплату поскольку предоставляется полностью сразу после оплаты. 
+							Пакеты "Стандарт" и "Премиум" могут оплачиваться частями, пропорционально проводимым онлайн занятиям. (оплата после проведения онлайн-занятия)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">Остались вопросы? Мы с радостью на них ответим!</p>
+                    <a target="__blank" href="https://t.me/dmitry_barekaev?text=Здравствуйте!%20Пишу%20Вам%20с%20сайта,%20подскажите%20пожалуйста..." class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-purple-700 transition-all">
+                        <i class="fas fa-envelope mr-2"></i> Написать нам
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Final CTA -->
+<section class="py-20 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Не упустите возможность изменить свою карьеру!</h2>
+        <p class="text-lg md:text-xl mb-10 text-gray-200">Научитесь создавать профессиональные интерфейсы в Figma за 14 дней даже без опыта. Присоединяйтесь к сотням студентов, которые уже начали новую жизнь в IT.</p>
+        <a href="#pricing" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-secondary hover:bg-purple-600 transition-all transform hover:scale-105 shadow-lg">
+            Начать обучение прямо сейчас <i class="fas fa-arrow-right ml-3"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="col-span-1">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-pen-fancy text-primary text-2xl mr-2"></i>
+                    <span class="text-xl font-bold">Dev4Rev</span>
+                </div>
+                <p class="text-gray-400 text-sm">Профессиональное обучение дизайну и разработке для новичков и продолжающих. Освойте Figma и начните карьеру в IT всего за 14 дней.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Быстрые ссылки</h3>
+                <ul class="space-y-2">
+                    <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Возможности</a></li>
+                    <li><a href="#program" class="text-gray-400 hover:text-white transition-colors">Программа курса</a></li>
+                    <li><a href="#reviews" class="text-gray-400 hover:text-white transition-colors">Отзывы</a></li>
+                    <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Legal -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Политика</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Политика конфиденциальности</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Пользовательское соглашение</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Оферта</a></li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Контакты</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>info@dev4rev.ru</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3"></i>
+                        <span>Казань, Россия</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+            &copy; 2023-2025 Dev4Rev. Все права защищены.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
