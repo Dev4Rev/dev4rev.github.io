@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <script src="/assets/js/theme-init.js"></script>
+  <title>404 — страница не найдена · Dev4Rev</title>
+  <meta name="description" content="Страница не найдена. Вернитесь на главную dev4rev или откройте один из сервисов.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="page-404">
+
+  <div class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="/" class="topbar__brand">dev4rev<span class="dot">.</span></a>
+      <div class="topbar__right">
+        <div class="theme" role="group" aria-label="Тема оформления">
+          <button type="button" data-theme-value="auto" title="Авто" aria-pressed="true">◐</button>
+          <button type="button" data-theme-value="light" title="Светлая" aria-pressed="false">☀</button>
+          <button type="button" data-theme-value="dark" title="Тёмная" aria-pressed="false">☾</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="nf">
+    <div class="nf__inner">
+      <p class="nf__code mono">404<span class="dot">.</span></p>
+      <h1 class="nf__title">Страница не найдена</h1>
+      <p class="nf__desc">Возможно, она была перемещена, удалена или вы ошиблись в адресе. Вернитесь на главную или откройте один из сервисов.</p>
+      <a class="nf__btn" href="/">На главную</a>
+
+      <div class="nf__links">
+        <a class="nf__link" href="https://tv.dev4rev.ru/" target="_blank" rel="noopener">
+          <span class="nf__link-title">TV</span>
+          <span class="nf__link-desc">iptv · vlc</span>
+        </a>
+        <a class="nf__link" href="https://proxymetr.dev4rev.ru/" target="_blank" rel="noopener">
+          <span class="nf__link-title">Proxymetr</span>
+          <span class="nf__link-desc">mtproto · telegram</span>
+        </a>
+        <a class="nf__link" href="https://frackoff.ru/" target="_blank" rel="noopener">
+          <span class="nf__link-title">Frackoff</span>
+          <span class="nf__link-desc">послания</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer__inner">
+      <span>© <span id="since">2023</span>–<span id="y">2026</span> dev4rev</span>
+      <a href="/">dev4rev.ru</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

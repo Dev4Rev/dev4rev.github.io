@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+Disallow: /changelog/
+Disallow: /roadmap/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexAdditional
+Allow: /
+
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid
+
+Sitemap: https://dev4rev.ru/sitemap.xml

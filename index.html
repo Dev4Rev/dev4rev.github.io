@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="ru" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <script src="/assets/js/theme-init.js"></script>
+  <title>Dev4Rev — полезные сервисы без рекламы</title>
+  <meta name="description" content="Dev4Rev — небольшая студия цифровых инструментов. Полезные сервисы без рекламы и слежки для повседневных задач, работы и учёбы.">
+  <meta name="keywords" content="dev4rev, цифровые инструменты, полезные сервисы, без рекламы, приложения для детей, обучение figma, iptv плейлист, m3u для kodi, proxymetr, frackoff">
+  <link rel="canonical" href="https://dev4rev.ru/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="dev4rev">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="dev4rev">
+  <meta property="og:title" content="Dev4Rev — полезные сервисы без рекламы">
+  <meta property="og:description" content="Небольшая студия цифровых инструментов. Полезные сервисы без рекламы и слежки для повседневных задач, работы и учёбы.">
+  <meta property="og:url" content="https://dev4rev.ru/">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dev4Rev — полезные сервисы без рекламы">
+  <meta name="twitter:description" content="Небольшая студия цифровых инструментов. Полезные сервисы без рекламы и слежки.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://dev4rev.ru/#org","name":"dev4rev","url":"https://dev4rev.ru/","foundingDate":"2023","email":"feedback@dev4rev.ru","description":"Студия цифровых инструментов: полезные сервисы для повседневных задач, работы и учёбы.","sameAs":["https://t.me/dev4rev","https://vk.com/dev4rev","https://instagram.com/dev4rev"]},
+    {"@type":"WebSite","@id":"https://dev4rev.ru/#site","url":"https://dev4rev.ru/","name":"dev4rev","inLanguage":"ru-RU","publisher":{"@id":"https://dev4rev.ru/#org"}},
+    {"@type":"ItemList","name":"Сервисы dev4rev","itemListElement":[
+      {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"Proxymetr — агрегатор MTProto прокси для Telegram","url":"https://t.me/proxymetrbot","operatingSystem":"Telegram, Web","description":"Агрегатор MTProto прокси для Telegram. Три способа доступа — Telegram-бот, VK, веб-кабинет."}},
+      {"@type":"ListItem","position":2,"item":{"@type":"WebApplication","name":"TV — IPTV-плейлисты M3U для VLC","url":"https://tv.dev4rev.ru/","description":"Готовые M3U-плейлисты для VLC и просмотр прямо в браузере."}},
+      {"@type":"ListItem","position":3,"item":{"@type":"WebApplication","name":"Frackoff — элегантные послания","url":"https://frackoff.ru/","description":"Сервис для элегантных посланий."}},
+      {"@type":"ListItem","position":4,"item":{"@type":"MobileApplication","name":"Зообуквы — учим буквы для детей без рекламы","url":"https://www.rustore.ru/catalog/app/ru.dev4rev.kids.zoobukvy","operatingSystem":"Android","description":"Детское приложение для изучения русского алфавита."}},
+      {"@type":"ListItem","position":5,"item":{"@type":"Course","name":"Обучение Figma — индивидуально с наставником","url":"https://dev4rev.ru/figma/","description":"Онлайн-встречи один на один по Figma. 1500 ₽ за академический час."}}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Как получить MTProto прокси для Telegram за минуту?","acceptedAnswer":{"@type":"Answer","text":"Откройте Telegram-бот @proxymetrbot. Нажмите Start — бот выдаст рабочий MTProto прокси сразу, без регистрации и лишних шагов."}},
+      {"@type":"Question","name":"Как смотреть IPTV-плейлисты прямо в браузере?","acceptedAnswer":{"@type":"Answer","text":"Откройте tv.dev4rev.ru. Вставьте ссылку M3U-плейлиста, нажмите «Загрузить» — появится список каналов. Выберите канал — видео откроется в плеере прямо на странице."}},
+      {"@type":"Question","name":"Как подключить IPTV-плейлист к VLC?","acceptedAnswer":{"@type":"Answer","text":"Скопируйте ссылку M3U-плейлиста с tv.dev4rev.ru. Откройте VLC → Медиа → Открыть URL. Вставьте ссылку, нажмите «Воспроизвести»."}},
+      {"@type":"Question","name":"Какое приложение порекомендовать ребёнку для изучения букв?","acceptedAnswer":{"@type":"Answer","text":"Зообуквы — Android-приложение из RuStore. Карточки, озвучка, мини-игры. Без рекламы и встроенных покупок."}},
+      {"@type":"Question","name":"Как записаться на индивидуальное обучение Figma?","acceptedAnswer":{"@type":"Answer","text":"Напишите в Telegram @dev4rev. Первая встреча — бесплатный разбор 15 минут. Дальше — 1500 ₽ за академический час."}},
+      {"@type":"Question","name":"Что умеет Frackoff?","acceptedAnswer":{"@type":"Answer","text":"Frackoff помогает упаковать прямую мысль в красивую форму. Готовые шаблоны, чистый дизайн, ничего лишнего."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+
+  <div class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#top" class="topbar__brand">dev4rev<span class="dot">.</span></a>
+      <div class="topbar__right">
+        <div class="theme" role="group" aria-label="Тема оформления">
+          <button type="button" data-theme-value="auto" title="Авто" aria-pressed="true">◐</button>
+          <button type="button" data-theme-value="light" title="Светлая" aria-pressed="false">☀</button>
+          <button type="button" data-theme-value="dark" title="Тёмная" aria-pressed="false">☾</button>
+        </div>
+        <button type="button" class="kbd-btn" id="openPalette" aria-label="Поиск и меню (⌘K)">
+          <span class="key">⌘</span><span>K</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <h1 class="brand">Dev4Rev<span class="dot">.</span></h1>
+      <p class="hero__eyebrow">Полезные сервисы без рекламы</p>
+
+      <div class="search" id="searchWrap">
+        <input type="text" class="search__input" id="inlineSearch"
+               placeholder="прокси, iptv, буквы, figma…"
+               autocomplete="off" spellcheck="false"
+               aria-label="Поиск по сервисам dev4rev">
+        <span class="search__kbd" aria-hidden="true">⌘K</span>
+        <div class="suggest" id="suggestPanel"></div>
+      </div>
+
+      <nav class="shortcuts" aria-label="Прямой доступ к сервисам">
+        <a class="shortcut shortcut--online" href="https://tv.dev4rev.ru/" rel="noopener" target="_blank">
+          <div class="shortcut__row">
+            <span class="shortcut__title">TV</span>
+            <span class="shortcut__dot" aria-label="online" title="online"></span>
+          </div>
+          <span class="shortcut__desc">iptv · vlc</span>
+        </a>
+        <a class="shortcut shortcut--degraded" href="https://proxymetr.dev4rev.ru/" rel="noopener">
+          <div class="shortcut__row">
+            <span class="shortcut__title">Proxymetr</span>
+            <span class="shortcut__dot" aria-label="degraded" title="degraded"></span>
+          </div>
+          <span class="shortcut__desc">mtproto · telegram</span>
+        </a>
+      </nav>
+
+    <details class="session" id="session">
+      <summary class="session__summary">
+        <svg class="session__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/>
+        </svg>
+        <span class="session__title">данные сессии: <b>что браузер сообщает о вас</b></span>
+        <span class="session__count mono" id="sessionCount">—</span>
+        <svg class="session__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <div class="session__body" id="sessionBody">
+
+        <div class="session__toolbar">
+          <button type="button" class="copy-btn" id="copyAll" title="Скопировать все данные сессии">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            скопировать всё
+          </button>
+          <button type="button" class="copy-btn" id="copyJson" title="Скопировать как JSON">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h8M8 12h8M8 18h8M4 4h16v16H4z"/></svg>
+            JSON
+          </button>
+        </div>
+
+        <div class="session__block" data-block="environment">
+          <div class="session__block-head">
+            <p class="session__block-title">environment</p>
+            <button type="button" class="copy-btn" data-copy-block="environment" aria-label="Скопировать блок environment">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>theme</dt><dd id="si-theme">—</dd>
+            <dt>color-scheme</dt><dd id="si-colorscheme">—</dd>
+            <dt>reduced motion</dt><dd id="si-motion">—</dd>
+            <dt>contrast</dt><dd id="si-contrast">—</dd>
+            <dt>engine</dt><dd id="si-engine">—</dd>
+            <dt>platform</dt><dd id="si-platform">—</dd>
+          </dl>
+        </div>
+
+        <div class="session__block" data-block="display">
+          <div class="session__block-head">
+            <p class="session__block-title">display</p>
+            <button type="button" class="copy-btn" data-copy-block="display" aria-label="Скопировать блок display">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>screen</dt><dd id="si-screen">—</dd>
+            <dt>viewport</dt><dd id="si-viewport">—</dd>
+            <dt>dpr</dt><dd id="si-dpr">—</dd>
+            <dt>orientation</dt><dd id="si-orientation">—</dd>
+            <dt>color depth</dt><dd id="si-colordepth">—</dd>
+          </dl>
+        </div>
+
+        <div class="session__block" data-block="locale">
+          <div class="session__block-head">
+            <p class="session__block-title">locale</p>
+            <button type="button" class="copy-btn" data-copy-block="locale" aria-label="Скопировать блок locale">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>language</dt><dd id="si-lang">—</dd>
+            <dt>languages</dt><dd id="si-langs">—</dd>
+            <dt>timezone</dt><dd id="si-tz">—</dd>
+            <dt>utc offset</dt><dd id="si-utc">—</dd>
+            <dt>date</dt><dd id="si-date">—</dd>
+            <dt>time</dt><dd id="si-time">—</dd>
+          </dl>
+        </div>
+
+        <div class="session__block" data-block="hardware">
+          <div class="session__block-head">
+            <p class="session__block-title">hardware</p>
+            <button type="button" class="copy-btn" data-copy-block="hardware" aria-label="Скопировать блок hardware">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>cpu cores</dt><dd id="si-cores">—</dd>
+            <dt>device memory</dt><dd id="si-memory">—</dd>
+            <dt>gpu</dt><dd id="si-gpuvendor">—</dd>
+            <dt>touch points</dt><dd id="si-touch">—</dd>
+          </dl>
+        </div>
+
+        <div class="session__block" data-block="network">
+          <div class="session__block-head">
+            <p class="session__block-title">network</p>
+            <button type="button" class="copy-btn" data-copy-block="network" aria-label="Скопировать блок network">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>online</dt><dd id="si-online">—</dd>
+            <dt>connection</dt><dd id="si-conn">—</dd>
+            <dt>effective type</dt><dd id="si-efftype">—</dd>
+            <dt>downlink</dt><dd id="si-downlink">—</dd>
+            <dt>rtt</dt><dd id="si-rtt">—</dd>
+            <dt>ip</dt><dd id="si-ip" title="Локальный IP из WebRTC-кандидатов. Публичный IP без внешних сервисов не определяется.">—</dd>
+          </dl>
+        </div>
+
+        <div class="session__block" data-block="storage">
+          <div class="session__block-head">
+            <p class="session__block-title">storage</p>
+            <button type="button" class="copy-btn" data-copy-block="storage" aria-label="Скопировать блок storage">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>cookies</dt><dd id="si-cookies">—</dd>
+            <dt>localStorage</dt><dd id="si-ls">—</dd>
+            <dt>sessionStorage</dt><dd id="si-ss">—</dd>
+          </dl>
+        </div>
+
+        <div class="session__block" data-block="session">
+          <div class="session__block-head">
+            <p class="session__block-title">session</p>
+            <button type="button" class="copy-btn" data-copy-block="session" aria-label="Скопировать блок session">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+          <dl class="session__dl">
+            <dt>started</dt><dd id="si-started">—</dd>
+            <dt>duration</dt><dd id="si-duration">—</dd>
+            <dt>referrer</dt><dd id="si-referrer">—</dd>
+          </dl>
+        </div>
+
+      </div>
+    </details>
+    </div>
+
+    <div class="hero__bottom" id="heroBottom">
+      <a href="#services" class="scroll-hint">
+        <span>прокрутите</span>
+        <span class="scroll-hint__arrow" aria-hidden="true">↓</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="content" id="content">
+
+    <section class="section reveal" id="services">
+      <div class="section__head">
+        <p class="section__eyebrow">01 · services</p>
+        <h2 class="section__title">Сервисы dev4rev</h2>
+        <p class="section__desc">Агрегатор MTProto прокси для Telegram, IPTV-плейлисты с просмотром в браузере, элегантные послания, детские приложения и обучение Figma.</p>
+      </div>
+      <div class="list">
+
+        <div class="item item--multi reveal reveal--d1">
+          <div class="item__body">
+            <h3 class="item__title">Proxymetr — агрегатор MTProto прокси для Telegram</h3>
+            <p class="item__desc">Бесплатный агрегатор рабочих MTProto прокси для Telegram. Бот собирает серверы из нескольких источников и выдаёт по запросу — за минуту, без регистрации. Три способа доступа: Telegram-бот, канал во ВКонтакте и веб-кабинет. Единый аккаунт и общая история.</p>
+            <div class="multi-links">
+              <a class="multi-link" href="https://t.me/proxymetrbot" target="_blank" rel="noopener" aria-label="Proxymetr в Telegram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 3.5 2.8 10.9c-.9.35-.87 1.65.05 1.94l4.6 1.44 1.7 5.2c.28.86 1.4 1.03 1.94.3l2.3-3.1 4.7 3.47c.7.5 1.7.13 1.9-.72l2.6-14.6c.15-.87-.7-1.6-1.55-1.28Z"/></svg>
+                Telegram
+              </a>
+              <a class="multi-link" href="https://vk.me/proxymetr" target="_blank" rel="noopener" aria-label="Proxymetr во ВКонтакте">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>
+                VK
+              </a>
+              <a class="multi-link" href="https://proxymetr.dev4rev.ru/" rel="noopener" aria-label="Proxymetr веб-кабинет">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17.5 8 12l3.5 3.5L21 6"/><path d="M15 6h6v6"/></svg>
+                Site
+              </a>
+            </div>
+            <span class="item__tag mono" style="margin-top: 8px;">mtproto · telegram · 2000+ users</span>
+          </div>
+        </div>
+
+        <a class="item reveal reveal--d1" href="https://tv.dev4rev.ru/" rel="noopener" target="_blank">
+          <div class="item__body">
+            <h3 class="item__title">TV — IPTV-плейлисты M3U и просмотр в браузере</h3>
+            <p class="item__desc">Бесплатные IPTV-плейлисты в формате M3U для VLC, Kodi и Smart TV. Смотрите каналы прямо в браузере без установки приложений или скачайте плейлист. Русские каналы, музыка, мультфильмы и спорт — без регистрации и рекламы.</p>
+            <span class="item__tag mono">iptv · m3u · vlc · tv.dev4rev.ru</span>
+          </div>
+          <span class="item__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="item reveal reveal--d1" href="https://frackoff.ru" rel="noopener" target="_blank">
+          <div class="item__body">
+            <h3 class="item__title">Frackoff — элегантные послания</h3>
+            <p class="item__desc">Сервис для красивых и элегантных посланий. Упакуйте прямую мысль в аккуратную форму: готовые шаблоны, чистый дизайн, без лишних слов. Когда хочется ответить коллеге, партнёру или начальнику — но не грубо, а элегантно.</p>
+            <span class="item__tag mono">послания · frackoff.ru</span>
+          </div>
+          <span class="item__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="item reveal reveal--d1" href="https://www.rustore.ru/catalog/app/ru.dev4rev.kids.zoobukvy" rel="noopener" target="_blank">
+          <div class="item__body">
+            <h3 class="item__title">Зообуквы — учим буквы для детей без рекламы</h3>
+            <p class="item__desc">Детское Android-приложение для изучения русского алфавита. Интерактивные карточки, озвучка букв, мини-игры. Без рекламы и встроенных покупок. Подходит для детей от 3 лет. Скачать бесплатно в RuStore.</p>
+            <span class="item__tag mono">android · rustore · kids 3+</span>
+          </div>
+          <span class="item__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <div class="item item--multi item--no-status reveal reveal--d1">
+          <div class="item__body">
+            <span class="edu-badge">обучение</span>
+            <h3 class="item__title" style="margin-top: 4px;">Обучение Figma — индивидуально с наставником</h3>
+            <p class="item__desc">Индивидуальное обучение Figma один на один. Разберём ваш проект или начнём с нуля: интерфейс, компоненты, автолейаут, прототипы. Первая встреча — бесплатный разбор на 15 минут. Дальше — 1500 ₽ за академический час, без обязательств и подписки.</p>
+            <div class="multi-links">
+              <a class="multi-link" href="https://t.me/dev4rev" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 3.5 2.8 10.9c-.9.35-.87 1.65.05 1.94l4.6 1.44 1.7 5.2c.28.86 1.4 1.03 1.94.3l2.3-3.1 4.7 3.47c.7.5 1.7.13 1.9-.72l2.6-14.6c.15-.87-.7-1.6-1.55-1.28Z"/></svg>
+                записаться
+              </a>
+              <a class="multi-link" href="mailto:feedback@dev4rev.ru?subject=Figma%20—%20запись%20на%20встречу">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                email
+              </a>
+            </div>
+            <span class="item__tag mono" style="margin-top: 8px;">1500 ₽ / ак. час · 1-на-1</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="section__head">
+        <p class="section__eyebrow">02 · contact</p>
+        <h2 class="section__title">Контакты</h2>
+        <p class="section__desc">Единый аккаунт <b>@dev4rev</b> везде — выберите удобную площадку.</p>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block__main">
+          <span class="contact-block__handle">@dev4rev</span>
+          <a class="contact-block__email" href="mailto:feedback@dev4rev.ru">feedback@dev4rev.ru</a>
+        </div>
+        <div class="contact-block__grid">
+          <a class="contact-block__item" href="https://t.me/dev4rev" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 3.5 2.8 10.9c-.9.35-.87 1.65.05 1.94l4.6 1.44 1.7 5.2c.28.86 1.4 1.03 1.94.3l2.3-3.1 4.7 3.47c.7.5 1.7.13 1.9-.72l2.6-14.6c.15-.87-.7-1.6-1.55-1.28Z"/></svg>
+            <span>telegram</span>
+          </a>
+          <a class="contact-block__item" href="https://vk.com/dev4rev" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>
+            <span>вконтакте</span>
+          </a>
+          <a class="contact-block__item" href="https://instagram.com/dev4rev" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg>
+            <span>instagram</span>
+          </a>
+          <a class="contact-block__item" href="mailto:feedback@dev4rev.ru">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="mission">
+      <div class="section__head">
+        <p class="section__eyebrow">03 · mission</p>
+        <h2 class="section__title">Миссия</h2>
+      </div>
+      <div class="prose prose--lead">
+        <p>Делать небольшие инструменты, которые решают одну задачу, но решают её хорошо. Без перегруженного интерфейса. Реклама в сервисах — только по согласию сообщества: если она и появляется, то не мешает работе и не следит за вами.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="principles">
+      <div class="section__head">
+        <p class="section__eyebrow">04 · principles</p>
+        <h2 class="section__title">Принципы</h2>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <span class="principle__num">01</span>
+          <h3 class="principle__title">Никакой слежки</h3>
+          <p class="principle__desc">Нет аналитики, cookie и пикселей. Всё, что мы знаем о вас — то, что видно в аккордеоне выше.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">02</span>
+          <h3 class="principle__title">Прислушиваемся к сообществу</h3>
+          <p class="principle__desc">Идеи и баги приходят от пользователей. Обратную связь читаем, приоритеты расставляем вместе.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">03</span>
+          <h3 class="principle__title">Один акцент</h3>
+          <p class="principle__desc">В интерфейсе один цвет и одно действие. Ничего не мигает, не отвлекает, не сбивает с толку.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">04</span>
+          <h3 class="principle__title">Данные у вас</h3>
+          <p class="principle__desc">Тема, история поиска, настройки — всё в localStorage вашего браузера. На сервер ничего не уходит.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">05</span>
+          <h3 class="principle__title">Открыто про изменения</h3>
+          <p class="principle__desc">Публичный changelog и roadmap. Видно, что и когда менялось.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">06</span>
+          <h3 class="principle__title">Без манипуляций</h3>
+          <p class="principle__desc">Никаких таймеров на скидку и «осталось 2 места». Только то, что вы хотите сделать сами.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="history">
+      <div class="section__head">
+        <p class="section__eyebrow">05 · history</p>
+        <h2 class="section__title">История</h2>
+        <p class="section__desc">Как из детской игры выросли несколько сервисов — короткая хронология.</p>
+      </div>
+      <div class="storyline">
+
+        <div class="storyline__item">
+          <div class="storyline__marker">
+            <span class="storyline__dot"></span>
+            <span class="storyline__year mono">май 2023</span>
+          </div>
+          <div class="storyline__body">
+            <h3>Зообуквы</h3>
+            <p>Всё началось с небольшой игры для детей. Хотелось сделать приложение, где ребёнок учит буквы спокойно, без рекламы и лишних покупок. В мае 2023 года появились <strong>Зообуквы</strong> — Android-приложение для изучения русского алфавита с карточками, озвучкой и мини-играми. Это был первый продукт созданный командой энтузиастов под брендом dev4rev.</p>
+          </div>
+        </div>
+
+        <div class="storyline__item">
+          <div class="storyline__marker">
+            <span class="storyline__dot"></span>
+            <span class="storyline__year mono">апрель 2024</span>
+          </div>
+          <div class="storyline__body">
+            <h3>Обучение Figma</h3>
+            <p>Через год появилось новое направление — <strong>обучение Figma</strong>. Не курс с уроками и дедлайнами, а живые онлайн-встречи один на один с наставником: разобрать свой проект, освоить автолейаут, пройтись по компонентам. Формат «бесплатный разбор за 15 минут» перед первым платным занятием — тоже отсюда.</p>
+          </div>
+        </div>
+
+        <div class="storyline__item">
+          <div class="storyline__marker">
+            <span class="storyline__dot"></span>
+            <span class="storyline__year mono">1 апреля 2026</span>
+          </div>
+          <div class="storyline__body">
+            <h3>Frackoff</h3>
+            <p>1 апреля 2026 года запустился <strong>Frackoff</strong> — сервис для элегантных посланий. Готовые шаблоны, чистый дизайн, ничего лишнего: иногда хочется ответить красиво, и это тоже инструмент. Первый публичный релиз был провальным поскольку сайт не успел получить SSL сертификат, что вызывало недоверие, однако когда все было окончательно настроено сервис со врменем обрел своих пользователей.</p>
+          </div>
+        </div>
+
+        <div class="storyline__item">
+          <div class="storyline__marker">
+            <span class="storyline__dot"></span>
+            <span class="storyline__year mono">12 апреля 2026</span>
+          </div>
+          <div class="storyline__body">
+            <h3>Proxymetr</h3>
+            <p>Следом, в апреле 2026 года, родился <strong>Proxymetr</strong> — агрегатор MTProto прокси для Telegram. Начался как обычный бот и за первые полгода набрал больше 2000 пользователей. Позже к нему добавились канал во ВКонтакте и веб-кабинет — единый аккаунт с общей историей.</p>
+          </div>
+        </div>
+
+        <div class="storyline__item">
+          <div class="storyline__marker">
+            <span class="storyline__dot"></span>
+            <span class="storyline__year mono">октябрь 2026</span>
+          </div>
+          <div class="storyline__body">
+            <h3>TV</h3>
+            <p>В октябре 2026 года появился <strong>TV</strong> — сервис IPTV-плейлистов: не только агрегатор M3U для VLC, но и просмотр каналов прямо в браузере. Плеер с hls.js, поиск, фильтр по группам, ТВ-режим для Smart TV. Текущий состав продуктов dev4rev — на этом.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section reveal section--centered" id="metrics">
+      <div class="section__head">
+        <p class="section__eyebrow">06 · metrics</p>
+        <h2 class="section__title">Метрики</h2>
+        <p class="section__desc">Открыто показываем аудиторию сервисов.</p>
+      </div>
+      <div class="metrics" id="metricsBlock">
+        <div class="metric">
+          <span class="metric__value" id="metric-users">—</span>
+          <span class="metric__label">пользователей всего</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value" id="metric-today">—</span>
+          <span class="metric__label">за сегодня</span>
+        </div>
+      </div>
+      <p class="metric__note" id="metric-note" aria-live="polite">demo · счётчик в разработке</p>
+    </section>
+
+    <section class="section reveal" id="faq">
+      <div class="section__head">
+        <p class="section__eyebrow">07 · faq</p>
+        <h2 class="section__title">Частые вопросы</h2>
+        <p class="section__desc">Короткие ответы про сервисы dev4rev — с прямыми ссылками, чтобы начать за пару минут.</p>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span>Как получить MTProto прокси для Telegram за минуту?</span>
+            <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__a">
+            Откройте Telegram-бот <a href="https://t.me/proxymetrbot" target="_blank" rel="noopener">@proxymetrbot</a> и нажмите Start. Бот выдаст рабочий MTProto прокси сразу — без регистрации и лишних шагов. Если Telegram под рукой нет, тот же кабинет доступен во <a href="https://vk.me/proxymetr" target="_blank" rel="noopener">ВКонтакте</a> или на <a href="https://proxymetr.dev4rev.ru/" rel="noopener">веб-версии</a>.
+            <br><a class="faq__cta" href="https://t.me/proxymetrbot" target="_blank" rel="noopener">Открыть бота</a>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span>Как смотреть IPTV-плейлисты прямо в браузере?</span>
+            <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__a">
+            Откройте <a href="https://tv.dev4rev.ru/" target="_blank" rel="noopener">tv.dev4rev.ru</a>. Вставьте ссылку M3U-плейлиста и нажмите «Загрузить» — появится список каналов. Выберите канал — видео откроется в плеере прямо на странице, без установки приложений.
+            <br><a class="faq__cta" href="https://tv.dev4rev.ru/" target="_blank" rel="noopener">Открыть TV</a>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span>Как подключить IPTV-плейлист к VLC?</span>
+            <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__a">
+            Скопируйте ссылку M3U-плейлиста с <a href="https://tv.dev4rev.ru/" target="_blank" rel="noopener">tv.dev4rev.ru</a>. Откройте VLC → <strong>Медиа → Открыть URL</strong>. Вставьте ссылку и нажмите «Воспроизвести». Каналы появятся в списке воспроизведения.
+            <br><a class="faq__cta" href="https://tv.dev4rev.ru/" target="_blank" rel="noopener">Открыть плейлисты</a>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span>Какое приложение порекомендовать ребёнку для изучения букв?</span>
+            <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__a">
+            <strong>Зообуквы</strong> — Android-приложение из RuStore. Карточки, озвучка, мини-игры. Без рекламы и встроенных покупок: ребёнок учится играя, родитель не платит за подписки. Подходит для детей от 3 лет.
+            <br><a class="faq__cta" href="https://www.rustore.ru/catalog/app/ru.dev4rev.kids.zoobukvy" target="_blank" rel="noopener">Скачать бесплатно</a>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span>Как записаться на индивидуальное обучение Figma?</span>
+            <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__a">
+            Напишите в Telegram <a href="https://t.me/dev4rev" target="_blank" rel="noopener">@dev4rev</a>. Обсудим уровень, цель и удобное время. Первая встреча — <strong>бесплатный разбор на 15 минут</strong>: подскажем, с чего начать именно вам. Дальше — 1500 ₽ за академический час, без обязательств и подписки.
+            <br><a class="faq__cta" href="https://t.me/dev4rev" target="_blank" rel="noopener">Записаться на разбор</a>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span>Что умеет Frackoff и зачем он нужен?</span>
+            <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq__a">
+            Frackoff помогает упаковать прямую мысль в красивую форму. Когда хочется ответить коллеге, партнёру или начальнику — но не грубо, а элегантно. Готовые шаблоны, чистый дизайн, ничего лишнего.
+            <br><a class="faq__cta" href="https://frackoff.ru" target="_blank" rel="noopener">Открыть Frackoff</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section reveal" id="changelog">
+      <div class="section__head">
+        <p class="section__eyebrow">08 · changelog</p>
+        <h2 class="section__title">Что нового</h2>
+      </div>
+      <div class="log">
+        <button type="button" class="log__card" id="openChangelog">
+          <div class="log__head">
+            <span class="log__title">Изменения</span>
+            <span class="log__arrow">↗</span>
+          </div>
+          <span class="log__desc">Changelog по продуктам</span>
+        </button>
+        <button type="button" class="log__card" id="openRoadmap">
+          <div class="log__head">
+            <span class="log__title">Дорожная карта</span>
+            <span class="log__arrow">↗</span>
+          </div>
+          <span class="log__desc">Планы по развитию сервисов</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer__inner">
+      <span>© <span id="since">2023</span>–<span id="y"></span> dev4rev</span>
+      <a href="#" id="openPrivacy">privacy</a>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Наверх" title="Наверх" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <div class="notice" id="notice" role="status" hidden>
+    <svg class="notice__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="4" y="4" width="16" height="16" rx="2"/>
+      <path d="M9 9h.01M9 13h.01M9 17h.01M13 9h2M13 13h2M13 17h2"/>
+    </svg>
+    <div class="notice__body">
+      <strong>localStorage.</strong>
+      Сайт хранит в localStorage только тему, историю поиска и служебные флаги.
+      Cookies и трекеры не используются. <a href="#" id="noticePrivacy">Подробнее</a>.
+    </div>
+    <button type="button" class="notice__close" id="noticeClose">ok</button>
+  </div>
+
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Поиск и меню">
+    <div class="overlay__panel">
+      <input type="text" class="overlay__search" id="overlaySearch" placeholder="Найти сервис или раздел…" autocomplete="off">
+      <ul class="overlay__list" id="overlayList"></ul>
+      <div class="overlay__hint">
+        <span><span class="key">↑↓</span> навигация</span>
+        <span><span class="key">↵</span> перейти</span>
+        <span><span class="key">esc</span> закрыть</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-label="Политика конфиденциальности">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <span class="modal__title">Политика конфиденциальности</span>
+        <button class="modal__close" type="button" data-close-modal>esc</button>
+      </div>
+      <div class="modal__body">
+        <h3>Что мы храним</h3>
+        <p>Сайт использует <code>localStorage</code> вашего браузера для хранения:</p>
+        <ul>
+          <li><strong>Тема оформления</strong> — auto / light / dark (<code>dev4rev.theme</code>)</li>
+          <li><strong>История поиска</strong> — до 5 последних запросов (<code>dev4rev.search.recent</code>)</li>
+          <li><strong>Служебные флаги</strong> — показ уведомления о localStorage, счётчик визитов</li>
+        </ul>
+        <p>Всё это не покидает ваше устройство. Мы не отправляем эти данные на сервер.</p>
+        <h3>Что мы НЕ используем</h3>
+        <ul>
+          <li>Cookie — не устанавливаем</li>
+          <li>Трекеры (Google Analytics, Яндекс.Метрика) — не подключаем</li>
+          <li>Пиксели соцсетей — не ставим</li>
+          <li>Сторонние скрипты сбора данных — не загружаем</li>
+        </ul>
+        <h3>Реклама в сервисах</h3>
+        <p>Мы не показываем рекламу без согласия сообщества. Если реклама и появляется — она не отслеживает пользователя, не перекрывает контент и не мешает работе сервиса.</p>
+        <h3>Данные сессии</h3>
+        <p>В аккордеоне «данные сессии» мы показываем <strong>вам</strong> то, что ваш браузер передаёт любому сайту при загрузке страницы. Эти данные используются только для отображения в интерфейсе и не логируются на сервере.</p>
+        <h3>Всплывающие окна</h3>
+        <p>Модальные окна «Что нового» и «Дорожная карта» подгружают данные из <code>/changelog/index.json</code> и <code>/roadmap/index.json</code> — это статические JSON-файлы в репозитории.</p>
+        <h3>Контакты</h3>
+        <p>Если у вас есть вопросы — пишите на <a href="mailto:feedback@dev4rev.ru">feedback@dev4rev.ru</a> или в Telegram <a href="https://t.me/dev4rev" target="_blank" rel="noopener">@dev4rev</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="changelogModal" role="dialog" aria-modal="true" aria-label="Что нового">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <span class="modal__title">Что нового</span>
+        <button class="modal__close" type="button" data-close-modal>esc</button>
+      </div>
+      <div class="modal__body" id="changelogBody">
+        <input type="search" class="modal-search" id="changelogSearch"
+              placeholder="Найти в изменениях…" autocomplete="off" aria-label="Поиск в изменениях">
+        <div class="tabs" id="changelogTabs" role="tablist"></div>
+        <div class="tab-panel" id="changelogPanel"><p style="color: var(--faint);">Загружаем…</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="roadmapModal" role="dialog" aria-modal="true" aria-label="Дорожная карта">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <span class="modal__title">Дорожная карта</span>
+        <button class="modal__close" type="button" data-close-modal>esc</button>
+      </div>
+      <div class="modal__body" id="roadmapBody">
+        <input type="search" class="modal-search" id="roadmapSearch"
+              placeholder="Найти в планах…" autocomplete="off" aria-label="Поиск в дорожной карте">
+        <div class="tabs" id="roadmapTabs" role="tablist"></div>
+        <div class="tab-panel" id="roadmapPanel"><p style="color: var(--faint);">Загружаем…</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/search.js" defer></script>
+  <script src="/assets/js/session.js" defer></script>
+  <script src="/assets/js/modal.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
